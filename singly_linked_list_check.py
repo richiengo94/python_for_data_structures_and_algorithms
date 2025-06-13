@@ -22,7 +22,8 @@ def cycle_check(node: Node) -> bool:
         while current_node.next_node is not None:
 
             # If it cycles through whole list, the current node and the start node will end up being the same and return True
-            # This only assumes that it cycles through the WHOLE linked list (i.e. next node is not the previous node)
+            # This only assumes that it cycles through the WHOLE linked list (i.e. it would have to pass through the start node again)
+            # This doesn't work if for some reason the linked list is only partially circular (e.g. a -> b -> c -> b)
             if current_node == start_node:
                  return True
             
@@ -57,7 +58,7 @@ def cycle_check2(node: Node) -> bool:
 
     while marker2 != None and marker2.next_node != None:
         
-        # Since they traverse at different rates, at some point, the markers will be the same assuming it is a circularly linked list
+        # Since they traverse at different rates, at some point, the markers will eventually be the same assuming it is a circularly linked list
         marker1 = marker1.next_node
         marker2 = marker2.next_node.next_node
 
