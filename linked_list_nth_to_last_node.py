@@ -81,6 +81,6 @@ b.nextnode = c
 c.nextnode = d
 d.nextnode = e
 
-target_node = nth_to_last_node(2, a)
+target_node = nth_to_last_node2(2, a)
 
 print(target_node.value)
