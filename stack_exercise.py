@@ -276,3 +276,48 @@ for i in range(3):
     print(s.pop())
 
 print(s.isEmpty())
+
+class Stack7(object):
+
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self) -> bool:
+
+        return self.items == []
+    
+    def push(self, item: Any) -> None:
+
+        self.items.append(item)
+
+    def peek(self) -> Any:
+
+        return self.items[-1]
+
+    def pop(self) -> Any:
+
+        return self.items.pop()
+    
+    def size(self) -> int:
+
+        return len(self.items)
+
+s = Stack7()
+
+print(s.isEmpty())
+
+s.push(1)
+s.push('two')
+
+print(s.peek())
+
+s.push(True)
+
+print(s.size())
+
+print(s.isEmpty())
+
+for i in range(3):
+    print(s.pop())
+
+print(s.isEmpty())
