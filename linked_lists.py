@@ -13,12 +13,20 @@ class DoublyLinkedList(object):
         self.next_node = None
         self.prev_node = None
 
+# Creates individual nodes, not the actual linked list
 a = SinglyLinkedList(1)
 b = SinglyLinkedList(2)
 c = SinglyLinkedList(3)
 
+# Links the nodes with a as the head and c as the tail creating a linked list
 a.next_node = b
 b.next_node = c
+
+print(a)
+print(a.next_node) # a.next_node = b in memory address
+print(b)
+print(a.next_node.next_node) # a.next_node.next_node = c in memory address
+print(c)
 
 x = DoublyLinkedList(1)
 y = DoublyLinkedList(2)

@@ -51,7 +51,7 @@ def sum_list(lst: list[int]) -> int:
     elif len(lst) == 1: # base case 2
         return lst[0]
     else: # recursion
-        return sum_list(lst[1::]) + lst[0]
+        return sum_list(lst[1:]) + lst[0]
 
 print(sum_list([]))
 print(sum_list([2]))
@@ -80,7 +80,7 @@ def max_num_in_list(lst: list[int]) -> int | None:
         elif len(lst) == 1: # base case 2
             return lst[0]
         else: # recursion
-            return max_num_in_list(lst[1::])
+            return max_num_in_list(lst[1:])
 
 print(max_num_in_list([]))
 print(max_num_in_list([2]))

@@ -76,3 +76,36 @@ b.next_node = c
 c.next_node = b
 
 print(cycle_check2(a))
+
+def cycle_check3(node: Node) -> bool:
+
+     curr_node_1: Node = node
+     curr_node_2: Node = node
+
+     while curr_node_1.next_node and curr_node_2.next_node:
+        if curr_node_1 == curr_node_2:
+            return True
+        else:
+            curr_node_1 = curr_node_1.next_node
+            curr_node_2 = curr_node_2.next_node.next_node
+
+     return False
+
+a = Node(1)
+b = Node(2)
+c = Node(3)
+
+a.next_node = b
+b.next_node = c
+c.next_node = b
+
+print(cycle_check3(a))
+
+x = Node(1)
+y = Node(2)
+z = Node(3)
+
+x.next_node = y
+y.next_node = z
+
+print(cycle_check(x))
